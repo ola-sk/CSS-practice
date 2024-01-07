@@ -8,7 +8,9 @@ Hey there! 👋 I'm [Ola](https://olasok.dev), and as the New Year kicks in 🎆
 
 Each of the projects is **hosted**, and you can see them LIVE 🟢 following links next to each of them below ⬇️. Each project has their separate directory 📁 at the root of this repository, so feel free to explore! 🔍
 
-[coming...]
+#### 💎 QR Code component ([see code](./qr-code-component/))
+- [css-practice-wine.vercel.app](https://css-practice-wine.vercel.app/)
+- [css-practice-ola-sks-projects.vercel.app](https://css-practice-ola-sks-projects.vercel.app/)
 
 ## Goals 🎳
 

@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #D5E1EF;
+
+  color: rgb(15, 27, 49);
+  text-align: center;
+  font-family: 'Young Serif', serif;
+}
+section.qr-code-card {
+  min-height: 87svh;
+  display: flex;
+  justify-content: center; /* Center items along the main axis */
+  align-items: center; /* Center items along the cross axis */
+}
+.card { 
+  background-color: white;
+  --card-width: 380px;
+  width: var(--card-width);
+  padding: clamp(0.63rem, 1vw, 1rem);
+  @media (max-width: 900px) {
+    box-shadow: rgba(54, 55, 56, 0.17) 0 33px 22px -22px;
+  }
+  @media (max-width: 500px) {
+    padding: 0 0 1rem;
+    box-shadow: rgba(54, 55, 56, 0.17) 0 20px 16px -11px;
+  }
+  @media (max-width: 300px) {
+    width: 100dvw;
+  }
+  margin: 0.4rem auto 0.6rem;
+  border-radius: clamp(0.9rem, 1.2vw, 1.4rem);
+  box-shadow: rgba(54, 55, 56, 0.17) 2px 42px 27px -30px;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+}
+.card img { 
+  display: block;
+  max-width: 100%;
+  border-radius: clamp(0.5rem, 0.5vw, 0.9rem);
+  margin-bottom: 0.65rem;
+}
+h1 {
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: 0.7px;
+  line-height: 1.36;
+  margin: 0.8rem 0 16px;
+}
+.card p {
+  padding: 0 1.3rem 0;
+  margin-bottom: 1rem;
+  font-family: "Rethink Sans", "Inter", sans-serif;
+  color: rgb(78, 80, 90);
+}
+.attribution { 
+  font-size: 0.7rem; 
+  padding: 1.45rem 0 0.24rem;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
