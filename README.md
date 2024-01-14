@@ -12,6 +12,10 @@ Each of the projects is **hosted**, and you can see them LIVE 🟢 following lin
 - [css-practice-wine.vercel.app](https://css-practice-wine.vercel.app/)
 - [css-practice-ola-sks-projects.vercel.app](https://css-practice-ola-sks-projects.vercel.app/)
 
+#### 💎 FAQ Accordion ([see code](./faq-accordion/))
+- [link to be added]()
+- [link to be added]()
+
 ## Goals 🎳
 
 Throughout this journey, my primary goals are:
