@@ -13,8 +13,8 @@ Each of the projects is **hosted**, and you can see them LIVE 🟢 following lin
 - [css-practice-ola-sks-projects.vercel.app](https://css-practice-ola-sks-projects.vercel.app/)
 
 #### 💎 FAQ Accordion ([see code](./faq-accordion/))
-- [link to be added]()
-- [link to be added]()
+- [faq-accordion-livid.vercel.app](https://faq-accordion-livid.vercel.app/)
+- [faq-accordion-ola-sks-projects.vercel.app](https://faq-accordion-ola-sks-projects.vercel.app/)
 
 ## Goals 🎳
 

@@ -28,10 +28,10 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 
 Users should be able to:
 
-- Hide/Show the answer to a question when the question is clicked
-- Navigate the questions and hide/show answers using keyboard navigation alone
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+- ✅ Hide/Show the answer to a question when the question is clicked
+- ✅ Navigate the questions and hide/show answers using keyboard navigation alone
+- ✅View the optimal layout for the interface depending on their device's screen size
+- ✅ See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
@@ -48,7 +48,8 @@ Users should be able to:
 - Git VCS
 
 ### 🟢 LIVE  Preview
-- [link to be added...]()
+- [faq-accordion-livid.vercel.app](https://faq-accordion-livid.vercel.app/)
+- [faq-accordion-ola-sks-projects.vercel.app](https://faq-accordion-ola-sks-projects.vercel.app/)
 
 ### Links
 
@@ -65,7 +66,7 @@ I **define and set the font**. This time I decided to learn how to link the font
 I **set colors and font-sizes**, then **adjust the paddings and margins between elements** in one screen size, then I use techniques like clamp funtion, relative sizes and size queries to make spacing and sizes look well in different screen sizes.
 I define a shadow under the FAQs element similar to the one in the design.
 I **link and write JavaScript code that manipulates the classes** on the answers to toggle them between visible and hidden states on the event triggered when user presses the toggle button using the mouse, keyboard or touch.
-I do adjustments to sizing, whitespace and colors.
+I do adjustments to sizing, whitespace and colors. I adjust the layout for mobile. 
 
 ### What I learned
 #### Static fonts & @font-face declaration
