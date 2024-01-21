@@ -54,7 +54,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github.com/ola-sk/CSS-practice](https://github.com/ola-sk/CSS-practice/tree/main/faq-accordion)
-- [To be added: Solution's page on Frontend Mentor]()
+- [Solution's page on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-interactive-faq-accordion-with-transitions-FDxtn172Kb)
 
 ## My process
 

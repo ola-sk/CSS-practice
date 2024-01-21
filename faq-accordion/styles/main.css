@@ -21,10 +21,10 @@
   img.background-image {
     content: url("../assets/images/background-pattern-desktop.svg");
   }
-  section.faq-container {
+  article.faq-container {
     padding: 2rem 2.2rem;
-    margin-top: 0.4rem;
-    margin-bottom: 0.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.65rem;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -34,9 +34,8 @@
   img.background-image {
     content: url("../assets/images/background-pattern-mobile.svg");
   }
-  section.faq-container {
-    margin-left: 1%;
-    margin-right: 1%;
+  article.faq-container {
+    margin: 0.5rem 1% 0.65rem;
     padding: 2.5svw;
   }
 }
@@ -58,7 +57,7 @@ img.background-image {
   height: auto;
   z-index: -1; /* Place the image behind other content */
 }
-article.main {
+main {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -67,24 +66,23 @@ article.main {
   justify-content: center;
   min-height: 92svh;
 }
-section.faq-container {
+article.faq-container {
   max-width: 607px;
   min-width: 230px;
-
 
   background-color: hsl(0, 0%, 100%);
   border-radius: 1rem;
   box-shadow: hsla(277, 84%, 10%, 0.13) 0 6px 50px -13px;
 }
-section > header.main-header {
+.faq-container > header.main-header {
   display: flex;
   padding-bottom: 1.5rem;
 }
-section > header.main-header img {
+.faq-container > header.main-header img {
   max-width: 2.16rem;
   margin: 0 1.05rem 0 0.25rem;
 }
-section > header.main-header h1 {
+.faq-container > header.main-header h1 {
   font-size: 3rem;
   font-weight: 700;
 }
