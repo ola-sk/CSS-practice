@@ -1,0 +1,282 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    background-color: hsl(235, 18%, 26%);
+    font-size: 0.9rem;
+}
+main {
+    --form-background: hsl(0, 0%, 100%);
+    min-height: 92svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media  only screen and (max-width: 700px) {
+        background-color: var(--form-background);
+    }
+}
+header > h1 {
+    @media only screen and (max-width: 700px) {
+        font-size: 2.4rem;
+    }
+    @media only screen and (min-width: 701px) {
+        font-size: xxx-large;
+    }
+    color: hsl(231, 31%, 13%);
+    line-height: 1.1;
+    padding-bottom: 0.6rem;
+}
+p {
+    padding: 0.7rem 0;
+    line-height: 1.3;
+}
+article {
+    --article-width: 760px;
+    max-width: var(--article-width);
+
+    display: flex;
+
+    background-color: var(--form-background);
+
+
+    @media only screen and (max-width: 700px) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        gap: 0;
+    }
+    @media only screen and (min-width: 701px) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+
+        margin: 0.6rem 0.2rem;
+        padding: 1.3rem 1.3rem 1.3rem 2.9rem;
+        border-radius: 1.8rem;
+    }
+}
+article > section.newsletter-form {
+    @media only screen and (max-width: 700px) {
+        margin: auto;
+        flex-grow: 1;
+        padding: 2rem 1.3rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    @media only screen and (min-width: 701px) {
+        padding: 2rem 0;
+        align-self: center;
+    }
+
+}
+article > section.decorative-illustration {
+    @media only screen and (max-width: 700px) {
+        width: 100%;
+        max-height: fit-content;
+        border-radius: 0 0 1rem 1rem;
+    }
+    @media only screen and (min-width: 701px) {
+        min-height: 100%;
+        max-width: 47%;
+        flex-grow: 1;
+        flex-shrink: 1.7;
+        align-self: stretch;
+
+        border-radius: 1rem;
+    }
+    overflow: hidden;
+}
+article > section.decorative-illustration img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 700px) {
+        content: url("../assets/images/illustration-sign-up-mobile.svg");
+    }
+}
+article ul {
+    list-style-type: none;
+    padding: 0.8rem 0 1.4rem;
+}
+article ul > li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    column-gap: 0.7rem;
+
+    padding-bottom: 0.7rem;
+}
+article ul > li::before {
+    margin: 0;
+    align-self: flex-start;
+    flex-shrink: 0;
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url("../assets/images/icon-list.svg") no-repeat;
+    background-size: 100% 100%;
+}
+
+article form label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding-left: 1px;
+}
+article form input, button.dismiss-confirmation-message {
+    display: block;
+
+    width: 100%;
+    padding: 1.1rem 1.3rem;
+    margin: 0.3rem 0 1.3rem;
+
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+}
+article form input:focus {
+    border: 1px solid black;
+    outline: none;
+}
+article form input[type="submit"], button.dismiss-confirmation-message {
+    text-align: center;
+    background-color: hsl(236, 30%, 18%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
+    transition: box-shadow 250ms ease, background 400ms ease;
+}
+article form input[type="submit"]:focus, button.dismiss-confirmation-message:focus {
+    background-image: linear-gradient(
+            110deg,
+            hsl(346, 100%, 65%) 0%,
+            hsl(0deg 100% 64%) 53%,
+            hsl(15, 98%, 60%) 100%
+    );
+    box-shadow: hsla(11, 100%, 62%, 0.66) 0 0.9rem 1.8rem;
+    outline: 1px grey solid;
+}
+article form input[type="submit"]:hover, button.dismiss-confirmation-message:hover {
+    background-image: linear-gradient(
+            110deg,
+            hsl(346, 100%, 65%) 0%,
+            hsl(0deg 100% 64%) 53%,
+            hsl(15, 98%, 60%) 100%
+    );
+    box-shadow: hsla(11, 100%, 62%, 0.66) 0 0.9rem 1.8rem;
+    outline: none;
+}
+article form input[type="submit"]:disabled {
+    filter: grayscale(10%);
+    box-shadow: none;
+    cursor: progress;
+}
+article form input[type="submit"].inactive-btn {
+    background-image: linear-gradient(
+            110deg,
+            hsl(346, 100%, 65%) 0%,
+            hsl(0deg 100% 64%) 53%,
+            hsl(15, 98%, 60%) 100%
+    );
+    filter: grayscale(10%);
+    box-shadow: none;
+    cursor: progress;
+}
+aside.confirmation-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    @media only screen and (max-width: 700px) {
+        background-color: var(--form-background);
+    }
+    @media only screen and (min-width: 701px) {
+        background: hsl(235, 18%, 26%);
+    }
+
+}
+aside.confirmation-message section {
+    padding: 0.5rem calc(25% - 60px) 2rem;
+    background: var(--form-background);
+    @media only screen and (max-width: 700px) {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        min-height: 100vh;
+    }
+    @media only screen and (min-width: 701px) {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 475px;
+        padding: 2.5rem 3rem;
+        border-radius: 1.8rem;
+    }
+}
+aside.confirmation-message section header {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+aside.confirmation-message section header img {
+    display: block;
+    width: clamp(2.8rem, 13%, 3.2rem);
+    margin-bottom: 1.5rem;
+}
+aside.confirmation-message section button {
+    margin: 1.5rem 0 0.6rem;
+    flex-grow: 0;
+}
+aside.confirmation-message span#email-subscribed {
+    font-weight: bold;
+}
+aside.confirmation-message.visible {
+    display: block;
+}
+.attribution {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.76rem;
+    text-align: center;
+    letter-spacing: 0.03rem;
+
+    padding: 0.8rem;
+}
+.attribution a {
+    color: hsla(4, 100%, 67%, 0.85);
+}
+.attribution a:focus {
+    outline: none;
+    font-weight: bolder;
+}
+.attribution address {
+    font-style: normal;
+    display: inline;
+    white-space: nowrap;
+}

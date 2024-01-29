@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/index.js" defer></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <main>
+    <article>
+      <section class="newsletter-form">
+        <header>
+          <h1>Stay updated!</h1>
+        </header>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form action="">
+          <label for="subscribers-email">Email address</label>
+          <input type="email" name="email" id="subscribers-email" placeholder="email@company.com" required minlength=6 maxlength=320 autocomplete autofocus pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+          <input type="submit" value="Subscribe to monthly newsletter">
+        </form>
+      </section>
+      <section class="decorative-illustration">
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="abstract illustration presenting an ipad in the front perspective and a window of an application floating in a layer closer to the viewer, floating even closer there is a stat: a number inside a pie chart with number 94, another floating element is a time series chart">
+      </section>
+    </article>
+    <aside class="confirmation-message">
+      <section>
+        <header>
+          <img src="./assets/images/icon-success.svg" alt="checkmark icon">
+          <h1>Thanks for subscribing!</h1>
+          <p>A confirmation email has been sent to <span id="email-subscribed">lorem@company.io</span>.
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+        </header>
+        <button class="dismiss-confirmation-message">Dismiss message</button>
+      </section>
+    </aside>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    <address>Coded by <a href="https://www.linkedin.com/in/olasokolek/">Ola Sokołek</a>.</address>
+  </footer>
+</body>
+</html>
