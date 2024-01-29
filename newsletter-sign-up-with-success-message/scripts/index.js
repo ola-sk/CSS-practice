@@ -9,6 +9,7 @@ formInputs.forEach(input =>
     }
 }));
 form.addEventListener('submit', e => {
+    e.preventDefault();
     formSubmission(e);
 });
 

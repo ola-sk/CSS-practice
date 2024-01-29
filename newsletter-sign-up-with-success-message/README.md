@@ -65,10 +65,13 @@ Users should be able to:
 - Semantic HTML5 markup
 - Pure CSS (incl. Flexbox & custom variables)
 - JavaScript
+- Vercel (hosting & deployment)
+
+- Git VCS
 
 ### 🟢 LIVE  Preview
-- [add link to live preview...]()
-- [add link to live preview...]()
+- [newsletter-signup-rose-iota.vercel.app](https://newsletter-signup-rose-iota.vercel.app/)
+- [newsletter-signup-ola-sks-projects.vercel.app](https://newsletter-signup-ola-sks-projects.vercel.app/)
 
 ### Links
 
