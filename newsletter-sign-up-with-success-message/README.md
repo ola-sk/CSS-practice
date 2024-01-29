@@ -76,7 +76,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github.com/ola-sk/CSS-practice](https://github.com/ola-sk/CSS-practice/tree/main/newsletter-sign-up-with-success-message)
-- [Solution's page on Frontend Mentor]()
+- [Solution's page on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-signup-form-with-input-validation-and-response-simulation-5tNUz9MxIb)
 
 
 ## My process
