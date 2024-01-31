@@ -16,6 +16,10 @@ Each of the projects is **hosted**, and you can see them LIVE 🟢 following lin
 - [faq-accordion-livid.vercel.app](https://faq-accordion-livid.vercel.app/)
 - [faq-accordion-ola-sks-projects.vercel.app](https://faq-accordion-ola-sks-projects.vercel.app/)
 
+#### 💎 Newsletter Signup Form ([see code](./newsletter-sign-up-with-success-message/))
+- [newsletter-signup-rose-iota.vercel.app](https://newsletter-signup-rose-iota.vercel.app/)
+- [newsletter-signup-ola-sks-projects.vercel.app](https://newsletter-signup-ola-sks-projects.vercel.app/)
+
 ## Goals 🎳
 
 Throughout this journey, my primary goals are:
