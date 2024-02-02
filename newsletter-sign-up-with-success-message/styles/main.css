@@ -226,7 +226,7 @@ aside.confirmation-message section {
         display: flex;
         flex-direction: column;
         gap: 4vh;
-        min-height: 100vh;
+        min-height: 100svh;
     }
     @media only screen and (min-width: 701px) {
         position: relative;
