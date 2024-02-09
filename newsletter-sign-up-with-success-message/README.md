@@ -293,17 +293,18 @@ function formSubmission(e) {
 `formSubmission()` function is triggered on press of a button or a key, and it triggers the `checkValidity()` on a Form. It can also be called on individual `input` elements selected in JS.
 ```javascript
 if (!form.checkValidity()) {
-        // !!! Prevent default form submission if form is invalid
-        e.preventDefault();
-        // Display validation error messages
-        form.reportValidity();
-    } else {
-        const email = form.querySelector('input[type="email"]#subscribers-email');
-        const submitButton = form.querySelector('input[type="submit"]');
-        submitButton.disabled = true;
-        submitButton.classList.add('inactive-btn');
-        simulateServerResponse(email.value)
-            .then(response => {
+    // !!! Prevent default form submission if form is invalid
+    e.preventDefault();
+    // Display validation error messages
+    form.reportValidity();
+} else {
+    const email = form.querySelector('input[type="email"]#subscribers-email');
+    const submitButton = form.querySelector('input[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.classList.add('inactive-btn');
+    simulateServerResponse(email.value)
+        .then(response => {
+            [...]
 ```
 
 ### What I learned
@@ -321,7 +322,8 @@ if (!form.checkValidity()) {
 - Metadata for an `<article>` like a publication date belongs in a `<time>` element.
 
 #### 🧡 HTML Forms
-- use `method="POST"` on a form in order to avoid sending the form data in the address URL while submitting the form. This method is safer for protecting sensitive data.
+- Using `method="POST"` on form submission in order to avoid sending the form data in the address URL while submitting the form. This method is safer for protecting sensitive data.
+- Using the `autocomplete` with arguments, e.g. `autocomplete="current-password webauthn"`. See the spec 📑: [https://html.spec.whatwg.org/#autofill-field](https://html.spec.whatwg.org/#autofill-field).
 - [Grouping form elements with `<fieldset>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
 
 #### 💛 Review of JavaScript: Handling DOM
@@ -365,7 +367,8 @@ To prevent users from using temporary email addresses, we can blacklist domains 
 ### 📖 Useful resources
 - [HTML5 client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#different_types_of_client-side_validation)
 - [HTML5 email form validation with regex pattern match](https://mailtrap.io/blog/html5-email-validation-tutorial/)
-- [HTML specification](https://html.spec.whatwg.org/multipage/sections.html) - HTML standard treating about semantic Sections of HTML document, when to use them
+- [HTML semantics specification](https://html.spec.whatwg.org/multipage/sections.html) - HTML standard treating about semantic Sections of HTML document & when to use them.
+- [HTML spec: Autofilling form controls - the autocomplete attribute](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill).
 - [flex *shorthand property* | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)
 
 - [object-fit | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
