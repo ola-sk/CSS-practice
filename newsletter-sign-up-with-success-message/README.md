@@ -88,9 +88,9 @@ main {
 - Place the content within the `<article>` card: Flexbox is well suited here as there needs to be content distributed across column or row. Therefore, I use it to arrange the content of the form to the left, and the illustration to the right, within the `<article>` for desktop.
 - The `<article>` as a Flexbox is immensely useful when coding mobile version as I simply change the `flex-direction` from `row` to `column-reverse` and have the illustration display at the top of the `<article>` element, effectively - on top of the page, while the second section: the form itself is right below it.
 - I give the `<article>` maximum width of `760px`, which I estimate to be a reasonable value for desktop-size viewports so that it never gets too big for larger screens, and it dynamically adjusts its size for smaller viewports.
-- The `<form>` along with related `<header>`, paragraph `<p>` and an unordered list `<ul>` is contained within the `<section class="newsletter-form">`.
+- The `<form>` along with related `<header>`, paragraph `<p>` and an unordered list `<ul>` is contained within the `<div class="newsletter-form">`.
 - Set up font sizes and paddings/margins; style inputs and buttons.
-- Add the top and bottom padding for the section `<section class="newsletter-form">` to establish its minimum height. The section with that vertical padding will then be able to establish the minimum height of the `<article>` element.
+- Add the top and bottom padding for the section `<div class="newsletter-form">` to establish its minimum height. The section with that vertical padding will then be able to establish the minimum height of the `<article>` element.
 - The illustration is contained within a section, which ensures that the image covers its entire area and hides the overflow of the image. It also adds the border-radius.
 ```CSS
 article {
@@ -119,7 +119,7 @@ article {
 - By default, the flex container `<article>` takes the minimal amount of height to accommodate the content ↕️, and since there are two elements lined up in horizontal configuration, they are going to be the only ones influencing the height.
 - Desktop version of the illustration has the right aspect ratio to guide the height of the `<article>` in case it is bigger than the form section together with padding. For it to be slightly higher I set the illustration itself to cover, I limit its container's width to 47% and let it take its height based on its content - at the minimum the illustration's height when it covers the entire container, while maintaining its aspect ratio (because of the cover). I do it by setting
 ```CSS
-article > section.decorative-illustration {
+article > div.decorative-illustration {
   @media only screen and (min-width: 701px) {
     min-height: 100%;
     max-width: 47%;
@@ -131,14 +131,14 @@ article > section.decorative-illustration {
   }
   overflow: hidden;
 }
-article > section.decorative-illustration img {
+article > div.decorative-illustration img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 ```
-❕ Applying a `min-height` to the `section.decorative-illustration` container allows it to dynamically adjust its height based on the containing box's (`<article>`) highest element. This ensures that if the highest element, such as the form section, exceeds the illustration's height, the illustration will adjust its height to fit within the container.
+❕ Applying a `min-height` to the `div.decorative-illustration` container allows it to dynamically adjust its height based on the containing box's (`<article>`) highest element. This ensures that if the highest element, such as the form section, exceeds the illustration's height, the illustration will adjust its height to fit within the container.
 This adjustment occurs when the form section surpasses the height of the illustration within the container, constrained by its width (the `max-width: 47%` on the illustration container). By setting the containing box's height to 100%, it would be determined by its content. However, if set to at least the minimum of 100% of the content's height (`min-height` property), it ensures that if another flex element within the Flexbox `<article>` attains a larger height, the container expands to accommodate and match the size of its container (`<article>` in this case).
 
 **_That is how both attributes: `align-self: stretch` and `min-height` work together!_** ⬇️
@@ -169,7 +169,7 @@ aside.confirmation-message {
     }
 
 }
-aside.confirmation-message section {
+aside.confirmation-message div {
     padding: 0.5rem calc(25% - 60px) 2rem;
     background: var(--form-background);
     @media only screen and (max-width: 700px) {
