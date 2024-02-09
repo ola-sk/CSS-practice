@@ -1,5 +1,5 @@
 // Submit form on keypress with `Enter` key
-const formInputs = document.querySelectorAll('article form > input');
+const formInputs = document.querySelectorAll('article form input');
 // Show Confirmation Message on Form Submit
 const form = document.querySelector('article form');
 formInputs.forEach(input =>
@@ -9,6 +9,7 @@ formInputs.forEach(input =>
     }
 }));
 form.addEventListener('submit', e => {
+    // to prevent the default form submission. The default form submission refreshes the page and would not let the rest of the event handler execute
     e.preventDefault();
     formSubmission(e);
 });

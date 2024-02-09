@@ -16,8 +16,27 @@ This is a solution to the [Newsletter sign-up form with success message challeng
   * [My process](#my-process)
     * [Preparation](#preparation)
     * [Positioning and styling the Subscription Form  📐✏️](#positioning-and-styling-the-subscription-form-)
+      * [For both _desktop_ 🖥️ and _mobile_ 📱:](#for-both-desktop--and-mobile-)
+      * [For _desktop_ 🖥️](#for-desktop-)
+      * [Positioning and Styling the confirmation message](#positioning-and-styling-the-confirmation-message)
+      * [Asynchronous form submission 🔄](#asynchronous-form-submission-)
     * [Challenges](#challenges)
+      * [keypress events 👇🏻](#keypress-events-)
+      * [pressing the Enter key submit the form w/o validation](#pressing-the-enter-key-submit-the-form-wo-validation)
     * [What I learned](#what-i-learned)
+      * [🧡 HTML5 native form validation methods](#-html5-native-form-validation-methods)
+      * [🧡 Semantic HTML](#-semantic-html)
+      * [🧡 HTML Forms](#-html-forms)
+      * [💛 Review of JavaScript: Handling DOM](#-review-of-javascript-handling-dom)
+      * [💙 CSS Specificity](#-css-specificity)
+      * [💙 CSS fixed positioning](#-css-fixed-positioning)
+      * [💙 Flexbox properties: flex _shorthand property_ for:](#-flexbox-properties-flex-shorthand-property-for)
+      * [💜 More on email validation and email strategy (beyond the scope)](#-more-on-email-validation-and-email-strategy-beyond-the-scope)
+        * [Double opt-in ✅✒️](#double-opt-in-)
+        * [What can be done before even sending the email to validate the address exists? 📮❓](#what-can-be-done-before-even-sending-the-email-to-validate-the-address-exists-)
+          * [Method of e-mail validation one should NOT rely upon](#method-of-e-mail-validation-one-should-not-rely-upon)
+        * [What if users try to use temporary email address and abandon it afterwards?](#what-if-users-try-to-use-temporary-email-address-and-abandon-it-afterwards)
+        * [Term definitions](#term-definitions)
     * [📖 Useful resources](#-useful-resources)
   * [👩🏻‍💻 Author](#-author)
 <!-- TOC -->
@@ -229,15 +248,8 @@ form.addEventListener('submit', async (e) => {
 });
 ```
 
-In my code I do not send the form data to any API, but I simulate it to demonstrate the interactions.
+In my code I only simulate sending the form data to an API to demonstrate the interactions.
 
-#### 
-HTML input validation is set and added the event listener on the press of the 'Enter' key.
-
-- Writing JavaScript to trigger form submission by pressing 'Enter' key.
-- Planning the Subscription confirmation message to be a pop-up and whether it fits in with its placement within the `<aside>` placed within the main.
-
-and experiment writing lots of CSS and changing what does not work!
 ### Challenges
 I dealt with the problem of the checkmark icons getting smaller on narrower viewport as I resize the window: each checkmark is a `::before` pseudo-element of `<li>` item, each `<li>` is made a flexbox and so the default `flex-shrink` value for a flex item is `1`, therefore it shrinks when the viewport gets smaller. Setting that value to `0` was the solution.
 
@@ -309,7 +321,7 @@ if (!form.checkValidity()) {
 - Metadata for an `<article>` like a publication date belongs in a `<time>` element.
 
 #### 🧡 HTML Forms
-- use ` method="POST"` on a form in order to avoid sending the form data in the address URL while submitting the form. This method is safer for protecting sensitive data.
+- use `method="POST"` on a form in order to avoid sending the form data in the address URL while submitting the form. This method is safer for protecting sensitive data.
 - [Grouping form elements with `<fieldset>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
 
 #### 💛 Review of JavaScript: Handling DOM
@@ -344,11 +356,11 @@ Furthermore, the implementation of such mechanisms needs to consider privacy and
 ✔️ Protection from bots using CAPTCHA, CloudFlare's Turnstile<sup>[1](https://developers.cloudflare.com/turnstile/)</sup>, invisible extra field <sup>[2](https://help.elasticemail.com/en/articles/2419115-how-to-prevent-bots-from-spamming-your-sign-up-forms#add-an-unseen-extra-field-or-honey-pot)</sup>
 
 ✔️ Single Sign-On
-###### Method of e-mail validation one should NOT rely upon:
+###### Method of e-mail validation one should NOT rely upon
 ❌ The `SMTP VRFY` request was historically used to verify whether an email address exists on a given mail server. For domains, these servers are typically specified under the MX (Mail Exchange) record. However, due to concerns regarding information security, this method is no longer reliable. Nowadays, when an `SMTP VRFY` request is made, it often returns either a code 250 (indicating that the address is valid) for every request, or a code 252 (indicating that the server explicitly does not disclose such information or does not know if the address exists). As a result, relying on `SMTP VRFY` for address verification is not recommended and deemed unreliable method of email address verification<sup>[2](https://stackoverflow.com/questions/565504/how-to-check-if-an-email-address-exists-without-sending-an-email)</sup>.
 ##### What if users try to use temporary email address and abandon it afterwards?
 To prevent users from using temporary email addresses, we can blacklist domains that are known for providing users with temporary email addresses. If effective this could save some sender's reputation. Moreover, if that filtering turns out to be ineffective, we can try to prevent locked out and abandoned accounts by adding an account recovery mechanism, e.g. requiring a verified phone number to be added as a recovery method or using single sign-on yield more valuable audience.
-##### Term definitions:
+##### Term definitions
 - Bouncing, rejecting, dropping email messages <sup>[3](https://en.wikipedia.org/wiki/Bounce_message), [4](https://www.saleshandy.com/blog/email-bounce-back/), [5](https://mailchimp.com/help/about-bounces/)</sup>.
 ### 📖 Useful resources
 - [HTML5 client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#different_types_of_client-side_validation)
