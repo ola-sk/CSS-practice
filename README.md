@@ -1,8 +1,7 @@
-# Welcome to My Front-End Development Journey!
+## Welcome to My Front-End small Projects/exercises!
 
-Hey there! 👋 I'm [Ola](https://olasok.dev), and as the New Year kicks in 🎆, I'm diving into exciting front-end development journey in 2024 🤿. This repository showcases my polished solutions 💎, a mix of small gems and more ambitious projects, as I refine my skills and embrace new technologies 👩🏻‍💻.
+Hey there! 👋 I'm [Ola](https://olasok.dev), and as the New Year kicks in 🎆 I'm diving into exciting front-end development. This repository showcases my solutions 💎.
 
-*Let's code with style!* ✨
 
 ## Live projects
 
